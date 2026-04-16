@@ -174,25 +174,72 @@
   .f-col a:hover { color:white; }
   .footer-bottom { max-width:1200px; margin:0 auto; padding-top:24px; border-top:1px solid rgba(255,255,255,.08); font-size:13px; text-align:center; }
 
-  /* RESPONSIVE */
+  /* RESPONSIVE TABLET */
   @media (max-width:960px) {
     nav { padding:0 24px; }
     section { padding:60px 24px; }
-    .hero-section { flex-direction:column; padding:90px 24px 48px; gap:40px; }
+    .hero-section { flex-direction:column; padding:90px 24px 48px; gap:32px; align-items:center; text-align:center; }
     .hero-right h1 { font-size:48px; }
+    .hero-right h2 { font-size:17px; }
+    .hero-btns { justify-content:center; }
     .screenshots-row { grid-template-columns:1fr; padding:0 24px 48px; }
     .cards-grid { grid-template-columns:1fr 1fr; }
     .portfolio-item { grid-template-columns:1fr; }
-    .p-video { order:-1; min-height:280px; }
-    .p-video iframe { min-height:280px; }
+    .p-video { order:-1; min-height:300px; }
+    .p-video iframe { min-height:300px; }
     .metrics-grid { grid-template-columns:1fr 1fr; }
     .footer-inner { grid-template-columns:1fr; }
+    .k-card { padding:24px; }
+    footer { padding:36px 24px; }
   }
+
+  /* RESPONSIVE MOBILE */
   @media (max-width:580px) {
-    .hero-right h1 { font-size:38px; }
+    nav { padding:0 16px; height:56px; }
+    .logo { font-size:18px; }
     .nav-links { display:none; }
-    .cards-grid { grid-template-columns:1fr; }
-    .metrics-grid { grid-template-columns:1fr 1fr; }
+
+    .hero-section { padding:76px 16px 40px; gap:24px; }
+    .hero-img { width:220px; height:260px; }
+    .hero-right h1 { font-size:36px; letter-spacing:-1px; }
+    .hero-right h2 { font-size:15px; }
+    .hero-right p { font-size:14px; }
+    .hero-btns { flex-direction:column; gap:10px; }
+    .btn-primary, .btn-secondary { width:100%; justify-content:center; padding:13px 20px; }
+
+    .screenshots-row { grid-template-columns:1fr; padding:0 16px 40px; gap:16px; }
+
+    section { padding:48px 16px; }
+    .sec-title { font-size:26px; }
+    .sec-sub { font-size:14px; }
+
+    .leistungen-sub { font-size:16px; }
+    .cards-grid { grid-template-columns:1fr; gap:12px; }
+    .card { padding:20px; }
+
+    .portfolio-item { border-radius:12px; }
+    .p-info { padding:20px; }
+    .p-info h3 { font-size:17px; }
+    .p-video { min-height:260px; }
+    .p-video iframe { min-height:260px; }
+
+    .metrics-grid { grid-template-columns:1fr 1fr; gap:10px; }
+    .metric-card { padding:16px 12px; }
+    .m-val { font-size:20px; }
+    .m-label { font-size:11px; }
+
+    .price-table th, .price-table td { padding:12px 14px; font-size:13px; }
+    .price { font-size:14px; }
+
+    #kontakt { padding:48px 16px; }
+    .k-card { padding:20px; }
+    .k-row a { font-size:13.5px; word-break:break-all; }
+    .k-btns { flex-direction:column; }
+    .btn-pink, .btn-white { width:100%; justify-content:center; }
+
+    footer { padding:36px 16px; }
+    .footer-inner { gap:24px; }
+    .footer-bottom { font-size:12px; }
   }
 </style>
 </head>
@@ -278,9 +325,11 @@
         <div class="p-desc">Ein ehrliches und humorvolles Review der Powerbank. Der Fokus liegt auf dem praktischen Nutzen – nie wieder mit leerem Handy draußen stehen. Das Video vermittelt Vertrauen durch Authentizität und zeigt die langen Akkulaufzeiten sowie die kompakte Größe. Perfekt für Marken, die echte Kundenbewertungen suchen.</div>
       </div>
       <div class="p-video">
-        <iframe src="https://streamable.com/e/lg6lhw"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <div class="iframe-wrap">
+          <iframe src="https://streamable.com/e/lg6lhw"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
@@ -295,9 +344,11 @@
         <div class="p-desc">Ein lustiger und relatable Monolog über das Potenzial, größer zu werden, mit praktischen Tipps und Methoden, die die Taller App bietet. Das Video zeigt, wie die App dir hilft, dein Wachstum zu fördern und deine Ziele zu erreichen. Dynamische Texteinblendungen und Soundeffekte unterstützen den Comedy-Effekt und machen das Video viral-würdig.</div>
       </div>
       <div class="p-video">
-        <iframe src="https://streamable.com/e/2r6ahu"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <div class="iframe-wrap">
+          <iframe src="https://streamable.com/e/2r6ahu"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
@@ -312,9 +363,11 @@
         <div class="p-desc">Ein ehrlicher und genussvoller Review des Lindt Goldhasen. Das Video zeigt die Details (Glitzern der Goldfolie, das Glöckchen-Geräusch) und vermittelt ein Gefühl von Gönnung und Lifestyle. Der Fokus liegt auf der Qualität der Schokolade und dem besonderen Erlebnis – perfekt für Marken, die Authentizität und Genuss kommunizieren möchten.</div>
       </div>
       <div class="p-video">
-        <iframe src="https://streamable.com/e/xfbr89"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+        <div class="iframe-wrap">
+          <iframe src="https://streamable.com/e/xfbr89"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
