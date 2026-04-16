@@ -106,6 +106,7 @@
     background:var(--white); border:1px solid var(--border); border-radius:16px;
     display:grid; grid-template-columns:1fr 1fr; margin-bottom:32px; overflow:hidden;
     box-shadow:0 2px 12px rgba(0,0,0,.04); transition:box-shadow .2s;
+    align-items:stretch;
   }
   .portfolio-item:hover { box-shadow:0 8px 32px rgba(0,0,0,.1); }
   .p-info { padding:40px; }
@@ -119,11 +120,15 @@
     border-left:3px solid var(--border); padding-left:16px; margin-top:20px;
   }
 
-  /* VIDEO side */
-  .p-video { background:#000; display:flex; align-items:stretch; min-height:380px; }
-  .p-video .iframe-wrap { width:100%; position:relative; }
-  .p-video .iframe-wrap iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; display:block; }
-  .p-video iframe { width:100%; min-height:380px; border:none; display:block; object-fit:cover; }
+  /* VIDEO */
+  .p-video { background:#000; position:relative; min-height:420px; }
+  .p-video .iframe-wrap {
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    width:100%; height:100%;
+  }
+  .p-video .iframe-wrap iframe {
+    width:100%; height:100%; border:none; display:block;
+  }
 
   /* METRIKEN */
   #metriken { background:var(--white); }
@@ -187,8 +192,8 @@
     .screenshots-row { grid-template-columns:1fr; padding:0 24px 48px; }
     .cards-grid { grid-template-columns:1fr 1fr; }
     .portfolio-item { grid-template-columns:1fr; }
-    .p-video { order:-1; }
-    .p-video .iframe-wrap { min-height:320px !important; }
+    .p-video { order:-1; position:relative; min-height:320px; height:320px; }
+    .p-video .iframe-wrap { position:absolute; top:0; left:0; right:0; bottom:0; }
     .metrics-grid { grid-template-columns:1fr 1fr; }
     .footer-inner { grid-template-columns:1fr; }
     .k-card { padding:24px; }
@@ -222,8 +227,7 @@
     .portfolio-item { border-radius:12px; }
     .p-info { padding:20px; }
     .p-info h3 { font-size:17px; }
-    .p-video { min-height:280px; }
-    .p-video .iframe-wrap { min-height:280px !important; }
+    .p-video { min-height:260px; height:260px; }
 
     .metrics-grid { grid-template-columns:1fr 1fr; gap:10px; }
     .metric-card { padding:16px 12px; }
