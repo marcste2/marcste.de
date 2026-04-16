@@ -120,8 +120,10 @@
   }
 
   /* VIDEO side */
-  .p-video { background:#111; display:flex; align-items:stretch; min-height:380px; }
-  .p-video iframe { width:100%; min-height:380px; border:none; display:block; }
+  .p-video { background:#000; display:flex; align-items:stretch; min-height:380px; }
+  .p-video .iframe-wrap { width:100%; position:relative; }
+  .p-video .iframe-wrap iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; display:block; }
+  .p-video iframe { width:100%; min-height:380px; border:none; display:block; object-fit:cover; }
 
   /* METRIKEN */
   #metriken { background:var(--white); }
@@ -185,8 +187,8 @@
     .screenshots-row { grid-template-columns:1fr; padding:0 24px 48px; }
     .cards-grid { grid-template-columns:1fr 1fr; }
     .portfolio-item { grid-template-columns:1fr; }
-    .p-video { order:-1; min-height:300px; }
-    .p-video iframe { min-height:300px; }
+    .p-video { order:-1; }
+    .p-video .iframe-wrap { min-height:320px !important; }
     .metrics-grid { grid-template-columns:1fr 1fr; }
     .footer-inner { grid-template-columns:1fr; }
     .k-card { padding:24px; }
@@ -220,8 +222,8 @@
     .portfolio-item { border-radius:12px; }
     .p-info { padding:20px; }
     .p-info h3 { font-size:17px; }
-    .p-video { min-height:260px; }
-    .p-video iframe { min-height:260px; }
+    .p-video { min-height:280px; }
+    .p-video .iframe-wrap { min-height:280px !important; }
 
     .metrics-grid { grid-template-columns:1fr 1fr; gap:10px; }
     .metric-card { padding:16px 12px; }
@@ -325,10 +327,8 @@
         <div class="p-desc">Ein ehrliches und humorvolles Review der Powerbank. Der Fokus liegt auf dem praktischen Nutzen – nie wieder mit leerem Handy draußen stehen. Das Video vermittelt Vertrauen durch Authentizität und zeigt die langen Akkulaufzeiten sowie die kompakte Größe. Perfekt für Marken, die echte Kundenbewertungen suchen.</div>
       </div>
       <div class="p-video">
-        <div class="iframe-wrap">
-          <iframe src="https://streamable.com/e/lg6lhw"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="iframe-wrap" style="position:relative;width:100%;min-height:420px;">
+          <iframe src="https://streamable.com/e/lg6lhw" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -344,10 +344,8 @@
         <div class="p-desc">Ein lustiger und relatable Monolog über das Potenzial, größer zu werden, mit praktischen Tipps und Methoden, die die Taller App bietet. Das Video zeigt, wie die App dir hilft, dein Wachstum zu fördern und deine Ziele zu erreichen. Dynamische Texteinblendungen und Soundeffekte unterstützen den Comedy-Effekt und machen das Video viral-würdig.</div>
       </div>
       <div class="p-video">
-        <div class="iframe-wrap">
-          <iframe src="https://streamable.com/e/2r6ahu"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="iframe-wrap" style="position:relative;width:100%;min-height:420px;">
+          <iframe src="https://streamable.com/e/2r6ahu" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -363,10 +361,8 @@
         <div class="p-desc">Ein ehrlicher und genussvoller Review des Lindt Goldhasen. Das Video zeigt die Details (Glitzern der Goldfolie, das Glöckchen-Geräusch) und vermittelt ein Gefühl von Gönnung und Lifestyle. Der Fokus liegt auf der Qualität der Schokolade und dem besonderen Erlebnis – perfekt für Marken, die Authentizität und Genuss kommunizieren möchten.</div>
       </div>
       <div class="p-video">
-        <div class="iframe-wrap">
-          <iframe src="https://streamable.com/e/xfbr89"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+        <div class="iframe-wrap" style="position:relative;width:100%;min-height:420px;">
+          <iframe src="https://streamable.com/e/xfbr89" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" allowfullscreen></iframe>
         </div>
       </div>
     </div>
